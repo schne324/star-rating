@@ -62,6 +62,14 @@ $star.on('keydown', '.five-stars li', function (keyVent) {
     case 40: // DOWN
       keyVent.preventDefault();
       keyMotion(target, 'prev');
+      break;
+    case 13: // ENTER
+      target.click();
+      break;
+    case 32: // SPACE BAR
+      keyVent.preventDefault(); // don't scroll
+      target.click();
+      break;
   }
 });
 
