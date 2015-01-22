@@ -19,7 +19,7 @@ $star.find('ul').each(function (i, ul) {
       'role': 'radio',
       'data-star-index': i,
       'aria-checked': 'false',
-      'aria-labelledby': tipID
+      'aria-labelledby': tipID + ' ' + $h2.prop('id')
     });
 
     if (0 === i) {
