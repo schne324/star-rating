@@ -1,5 +1,8 @@
-var fullStar = 'fa-star';
-var emptyStar = 'fa-star-o';
+/* global $ */
+'use strict';
+
+var FULL_STAR = 'fa-star';
+var EMPTY_STAR = 'fa-star-o';
 var $star = $('#star');
 
 // initial setup:
@@ -73,34 +76,36 @@ $star.on('keydown', '.five-stars li', function (keyVent) {
   }
 });
 
-function focusHandler() {
-  var numStars = parseInt(this.getAttribute('data-star-index'), 10) + 1;
-  var $tip = $(this).closest('.five-stars').find('.tip').first();
+function focusHandler(e) {
+  var numStars = parseInt(e.target.getAttribute('data-star-index'), 10) + 1;
+  var $tip = $(e.target).closest('.five-stars').find('.tip').first();
   $tip.html(numStars + '/5 stars').show();
 }
 
-function blurHandler() {
-  var starIndex = parseInt(this.getAttribute('data-star-index'), 10);
-  var isChecked = $(this).hasClass(fullStar);
+function blurHandler(e) {
+  setTimeout(function () {
+    var starIndex = parseInt(e.target.getAttribute('data-star-index'), 10);
+    var isChecked = $(e.target).find('i').hasClass(FULL_STAR);
 
-  if (starIndex === 0 && !isChecked) {
-    var $tip = $(this).closest('.five-stars').find('.tip').first();
-    $tip.html('not yet rated');
-  }
+    if (starIndex === 0 && !isChecked) {
+      var $tip = $(e.target).closest('.five-stars').find('.tip').first();
+      $tip.html('not yet rated');
+    }
+  });
 }
 
 function fill(star) {
   $(star)
     .find('i')
-    .removeClass(emptyStar)
-    .addClass(fullStar);
+    .removeClass(EMPTY_STAR)
+    .addClass(FULL_STAR);
 }
 
 function unfill(star) {
   $(star)
     .find('i')
-    .removeClass(fullStar)
-    .addClass(emptyStar);
+    .removeClass(FULL_STAR)
+    .addClass(EMPTY_STAR);
 }
 
 function ratingConfig(star) {
