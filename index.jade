@@ -1,0 +1,87 @@
+doctype html
+html
+  head
+    link(type='text/css', rel='stylesheet', href='styles.css')
+    link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
+    link(href='http://fonts.googleapis.com/css?family=Poiret+One', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css')
+    title Accessible Star Rating
+  body
+    h1 Accessible Star Rating
+    a(href="#", class="clipper", id="skip-ratings") Skip past ratings
+    #star
+      div.rating
+        div.rate-me
+          h2 Uber
+          div.icon(role="presentation")
+            i.fa.fa-taxi
+          div.five-stars
+            ul
+              li
+                i.fa.fa-star-o
+              li
+                i.fa.fa-star-o
+              li
+                i.fa.fa-star-o
+              li
+                i.fa.fa-star-o
+              li
+                i.fa.fa-star-o
+            .tip not yet rated
+        div.rate-me
+            h2 NASA
+            div.icon(role="presentation")
+              i.fa.fa-rocket
+            div.five-stars
+              ul
+                li
+                  i.fa.fa-star-o
+                li
+                  i.fa.fa-star-o
+                li
+                  i.fa.fa-star-o
+                li
+                  i.fa.fa-star-o
+                li
+                  i.fa.fa-star-o
+              .tip not yet rated
+        div.rate-me
+            h2 Plane
+            div.icon(role="presentation")
+              i.fa.fa-plane
+            div.five-stars
+              ul
+                li
+                  i.fa.fa-star-o
+                li
+                  i.fa.fa-star-o
+                li
+                  i.fa.fa-star-o
+                li
+                  i.fa.fa-star-o
+                li
+                  i.fa.fa-star-o
+              .tip not yet rated
+        div.rate-me
+            h2 Personal Car
+            div.icon(role="presentation")
+              i.fa.fa-car
+            div.five-stars
+              ul
+                li
+                  i.fa.fa-star-o
+                li
+                  i.fa.fa-star-o
+                li
+                  i.fa.fa-star-o
+                li
+                  i.fa.fa-star-o
+                li
+                  i.fa.fa-star-o
+              .tip not yet rated
+    div#text(tabindex="-1")
+      p Above is a live demo of an accessible star rating system.  At the moment a user can only rate to the nearest whole star (no half stars).  For more info read the
+        a(href="https://github.com/schne324/star-rating/blob/master/README.md") README.
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    script(src="js/star-rating.js")
+    script(src="js/skip-link.js")

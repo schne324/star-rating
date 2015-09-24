@@ -1,0 +1,113 @@
+body {
+    font-family: 'Poiret One', cursive;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 55px;
+    text-align: center;
+}
+
+.clipper {
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+    background-color: #fff;
+    z-index: 9;
+    font-size: 25px;
+    color: #000;
+}
+
+.clipper:focus {
+    clip: auto;
+
+}
+
+.rate-me h2 {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.five-stars ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.five-stars ul li {
+    display: inline-block;
+    font-size: 35px;
+    margin: 0 auto;
+}
+
+.open-hover i {
+    color: #FFD700;
+}
+
+.icon {
+    font-size: 45px;
+}
+
+.rating {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rate-me {
+    padding: 15px;
+    background-color: #444;
+    color: #fff;
+    margin: 5px;
+    width: 45%;
+    display: inline-block;
+}
+
+.rate-me:hover {
+    background-color: #000;
+}
+
+.fa-star {
+    color: #FFD700;
+}
+
+.tip {
+    padding: 7px;
+    background-color: #fff;
+    color: #000;
+    border: 10px double #FFD700;
+    text-align: center;
+    width: 150px;
+    border-radius: 75px;
+    margin: 10px auto;
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+}
+
+#text {
+    font-size: 22px;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+#text a {
+    margin-left: 2.5px;
+}
+
+#text p {
+    font-weight: bold;
+}
+
+
+@media(max-width: 820px) {
+    /*.rating { width: 90%; }*/
+    .rate-me {
+        width: 90%;
+        display: block;
+        margin: 5px auto;
+    }
+}
