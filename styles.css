@@ -42,6 +42,10 @@ h1 {
     margin: 0 auto;
 }
 
+.open-hover i {
+    color: #FFD700;
+}
+
 .icon {
     font-size: 45px;
 }
@@ -73,7 +77,7 @@ h1 {
     padding: 7px;
     background-color: #fff;
     color: #000;
-    border: 6px dotted #FFD700;
+    border: 10px double #FFD700;
     text-align: center;
     width: 150px;
     border-radius: 75px;

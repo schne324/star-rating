@@ -18,7 +18,8 @@ $star.find('ul').each(function (i, ul) {
   // iterating through each ul and THEN each li within the
   // given ul to leverage `i` (index) for data-attributes
   $(ul).find('li').each(function (i, li) {
-    $(li).attr({
+    var $li = $(li);
+    $li.attr({
       'role': 'radio',
       'data-star-index': i,
       'aria-checked': 'false',
@@ -31,10 +32,23 @@ $star.find('ul').each(function (i, ul) {
       li.tabIndex = -1;
     }
 
-    $(li).on('focus', focusHandler);
-    $(li).on('blur', blurHandler);
-  });
+    $li.on('focus', focusHandler);
+    $li.on('blur', blurHandler);
 
+    $li.on('mouseover focus', function () {
+      $(this)
+        .addClass('open-hover')
+        .prevAll()
+          .addClass('open-hover');
+    });
+
+    $li.on('mouseout blur', function () {
+      $(this)
+        .removeClass('open-hover')
+        .prevAll()
+          .removeClass('open-hover');
+    });
+  });
 });
 
 // mouse users:
@@ -42,6 +56,7 @@ $star.on('click', '.five-stars li', function (e) {
   e.preventDefault();
   ratingConfig(this);
 });
+
 
 // keyboard users:
 $star.on('keydown', '.five-stars li', function (keyVent) {
