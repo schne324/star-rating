@@ -9,6 +9,13 @@ h1 {
     text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+h2 {
+    text-align: center;
+}
+
+>>>>>>> c3d13b2e26c703dcea18ced6494f9cc5c9ead219
 .clipper {
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
